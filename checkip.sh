@@ -6,7 +6,8 @@ ip=""
 attempt=0
 while [ "$ip" = "" ]; do
         attempt=$(($attempt+1))
-        ip=`curl http://geoip.hidemyass.com/ip/ 2>/dev/null`
+        ip=$(wget geoip.hidemyass.com/ip/-q -O -)
+        #ip=`curl http://geoip.hidemyass.com/ip/ 2>/dev/null`
         if [ "$ip" != "" ]; then
                 echo "- Your current IP is: $ip"
         fi
