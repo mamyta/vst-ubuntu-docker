@@ -20,7 +20,7 @@ done
 wget -O /tmp/hma-template.ovpn http://zdcdn.hidemyass.com/other/hma-template.ovpn
 echo "proto tcp" >> /tmp/hma-template.ovpn
 echo "remote 184.75.217.2 443" >> /tmp/hma-template.ovpn
-sed -i 's/auth-user-pass/auth-user-pass /tmp/login-vpn.conf/g' /tmp/hma-template.ovpn
+sed -i 's/auth-user-pass/auth-user-pass \/tmp\/login-vpn.conf/g' /tmp/hma-template.ovpn
 
 sudo openvpn --daemon --script-security 3 --config /tmp/hma-template.ovpn
 sleep 10
