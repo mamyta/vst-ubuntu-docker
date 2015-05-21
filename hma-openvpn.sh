@@ -1,6 +1,6 @@
 #!/bin/bash
 
-trap ctrl_c INT
+#trap ctrl_c INT
 
 function ctrl_c() {
 clear
